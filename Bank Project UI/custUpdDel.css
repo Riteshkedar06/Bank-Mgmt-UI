@@ -12,25 +12,25 @@ body {
 
 /* Container styling */
 .container {
-  max-width: 900px;
-  margin: 100px auto;
-  padding: 20px;
+  max-width: 56.25rem;
+  margin: 6.25rem auto;
+  padding: 1.25rem;
   background-color: #f4f8fb;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
 }
 
 .card {
   background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
 }
 /* Heading styling */
 h2 {
   color: #333;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 /* Label styling */
@@ -42,8 +42,8 @@ label {
 /* Input and select field styling */
 input.form-control,
 textarea.form-control {
-  border-radius: 5px;
-  border: 1px solid #ced4da;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #ced4da;
   transition: border-color 0.2s;
 }
 
@@ -55,15 +55,15 @@ textarea.form-control:focus {
 
 /* Button styling */
 button {
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 5px;
+  font-size: 1.0rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
   transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 button:hover {
   background-color: #0056b3;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
 }
 
 button:focus {
@@ -72,14 +72,14 @@ button:focus {
 
 /* Success and error message styling */
 #message {
-  font-size: 14px;
-  margin-top: 20px;
+  font-size: 0.875rem;
+  margin-top: 1.25rem;
 }
 
 .alert-info {
-  font-size: 14px;
-  padding: 15px;
-  margin-top: 20px;
+  font-size: 0.875rem;
+  padding: 0.9375rem;
+  margin-top: 1.25rem;
 }
 
 /* Disabled button */

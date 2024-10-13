@@ -8,18 +8,18 @@ body {
 }
 
 .container {
-    max-width: 600px;
-    margin: 100px auto;
-    padding: 20px;
+    max-width: 37.5rem;
+    margin: 6.25rem auto;
+    padding: 1.25rem;
     background-color: #eef3f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 .card {
     background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
   }
 
 h2 {
@@ -46,8 +46,8 @@ label {
 input.form-control,
 select.form-select,
 textarea {
-    border: 1px solid #ced4da;
-    border-radius: 5px;
+    border: 0.0625rem solid #ced4da;
+    border-radius: 0.3125rem;
     transition: border-color 0.3s;
 }
 
@@ -55,30 +55,30 @@ input.form-control:focus,
 select.form-select:focus,
 textarea:focus {
     border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 0.3125rem rgba(0, 123, 255, 0.5);
 }
 
 .step-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .success-message {
     display: none;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 1.25rem;
+    padding: 0.625rem;
     background-color: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
 }
 
 .btn {
     flex: 1;
-    margin: 0 5px;
-    padding: 10px 15px; /* Consistent padding */
-    border-radius: 5px;
+    margin: 0 0.3125rem;
+    padding: 0.625rem 0.9375rem; /* Consistent padding */
+    border-radius: 0.3125rem;
 }
 
 #prevBtn,
@@ -103,8 +103,8 @@ textarea:focus {
     background-color: #5a6268; /* Darker shade on hover */
 }
 
-@media (max-width: 576px) {
+@media (max-width: 36rem) {
     .container {
-        padding: 15px;
+        padding: 0.9375rem;
     }
 }

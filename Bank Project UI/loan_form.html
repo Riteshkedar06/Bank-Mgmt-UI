@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Application Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="loan_form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+      <h2 class="my-4">Loan Application Form</h2>
+
+      <form id="loanForm">
+        <!-- Step 1: Personal Details -->
+        <div class="step active">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ssn" class="form-label">Customer SSN ID (Read-Only)</label>
+              <input type="text" class="form-control" id="ssn" readonly />
+            </div>
+            <div class="form-group">
+              <label for="customerName" class="form-label">Customer Name</label>
+              <input type="text" class="form-control" id="customerName" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="occupation" class="form-label">Occupation</label>
+              <input type="text" class="form-control" id="occupation" required />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Employer Details -->
+        <div class="step">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="employerName" class="form-label">Employer Name</label>
+              <input type="text" class="form-control" id="employerName" required />
+            </div>
+            <div class="form-group">
+              <label for="employerAddress" class="form-label">Employer Address</label>
+              <textarea class="form-control" id="employerAddress" rows="2" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Contact & Loan Details -->
+        <div class="step">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="address" class="form-label">Address</label>
+              <textarea class="form-control" id="address" rows="2" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="maritalStatus" class="form-label">Marital Status</label>
+              <select id="maritalStatus" class="form-select" required>
+                <option value="" disabled selected>Select Status</option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactNumber" class="form-label">Contact Number</label>
+              <input type="text" class="form-control" id="contactNumber" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Loan Details -->
+        <div class="step">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="loanAmount" class="form-label">Loan Amount</label>
+              <input type="number" class="form-control" id="loanAmount" required />
+            </div>
+            <div class="form-group">
+              <label for="loanDuration" class="form-label">Loan Duration (in years)</label>
+              <input type="number" class="form-control" id="loanDuration" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Success message -->
+        <div id="successMessage" class="success-message"></div>
+
+        <!-- Navigation Buttons -->
+        <div class="step-buttons">
+          <button type="button" class="btn btn-secondary" id="prevBtn" onclick="prevStep()">Previous</button>
+          <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextStep()">Next</button>
+          <button type="submit" class="btn btn-success" id="submitBtn" style="display: none">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+    <script src="loan_form.js"></script>
+  </body>
+</html>

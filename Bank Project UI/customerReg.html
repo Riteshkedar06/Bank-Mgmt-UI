@@ -13,144 +13,150 @@
   <body>
     <div class="container">
       <div class="card">
-      <h2 class="text-center my-4">Customer Registration Form</h2>
+        <h2 class="text-center my-4">Customer Registration Form</h2>
 
-      <form id="customerForm">
-        <!-- Step 1: Personal Details -->
-        <div class="step active">
-          <div class="mb-3">
-            <label for="ssn" class="form-label">Customer SSN ID</label>
-            <input type="text" class="form-control" id="ssn" required />
+        <form id="customerForm">
+          <!-- Step 1: Personal Details -->
+          <div class="step active">
+            <div class="mb-3">
+              <label for="ssn" class="form-label">Customer SSN ID</label>
+              <input type="text" class="form-control" id="ssn" required />
+            </div>
+            <div class="mb-3">
+              <label for="customerName" class="form-label">Customer Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="customerName"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="dob" class="form-label">Date of Birth</label>
+              <input type="date" class="form-control" id="dob" required />
+            </div>
+            <div class="mb-3">
+              <label for="gender" class="form-label">Gender</label>
+              <select id="gender" class="form-select" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="customerName" class="form-label">Customer Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="customerName"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="dob" class="form-label">Date of Birth</label>
-            <input type="date" class="form-control" id="dob" required />
-          </div>
-          <div class="mb-3">
-            <label for="gender" class="form-label">Gender</label>
-            <select id="gender" class="form-select" required>
-              <option value="" disabled selected>Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-        </div>
 
-        <!-- Step 2: Account Details -->
-        <div class="step">
-          <div class="mb-3">
-            <label for="accountNumber" class="form-label">Account Number</label>
-            <input
-              type="text"
-              class="form-control"
-              id="accountNumber"
-              required
-            />
+          <!-- Step 2: Account Details -->
+          <div class="step">
+            <div class="mb-3">
+              <label for="accountNumber" class="form-label"
+                >Account Number</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="accountNumber"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="ifsc" class="form-label">IFSC Code</label>
+              <input type="text" class="form-control" id="ifsc" required />
+            </div>
+            <div class="mb-3">
+              <label for="accountBalance" class="form-label"
+                >Account Balance</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="accountBalance"
+                required
+              />
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="ifsc" class="form-label">IFSC Code</label>
-            <input type="text" class="form-control" id="ifsc" required />
+
+          <!-- Step 3: Identity Details -->
+          <div class="step">
+            <div class="mb-3">
+              <label for="aadhaar" class="form-label">Aadhaar Card No</label>
+              <input type="text" class="form-control" id="aadhaar" required />
+            </div>
+            <div class="mb-3">
+              <label for="pan" class="form-label">Pan Card No</label>
+              <input type="text" class="form-control" id="pan" required />
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="accountBalance" class="form-label"
-              >Account Balance</label
+
+          <!-- Step 4: Contact Details -->
+          <div class="step">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Address</label>
+              <textarea
+                class="form-control"
+                id="address"
+                rows="2"
+                required
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="contactNumber" class="form-label"
+                >Contact Number</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="contactNumber"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="maritalStatus" class="form-label"
+                >Marital Status</label
+              >
+              <select id="maritalStatus" class="form-select" required>
+                <option value="" disabled selected>Select Status</option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Success message -->
+          <div id="successMessage" class="success-message"></div>
+
+          <!-- Navigation Buttons -->
+          <div class="step-buttons">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              id="prevBtn"
+              onclick="prevStep()"
             >
-            <input
-              type="number"
-              class="form-control"
-              id="accountBalance"
-              required
-            />
+              Previous
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="nextBtn"
+              onclick="nextStep()"
+            >
+              Next
+            </button>
+            <button
+              type="submit"
+              class="btn btn-success"
+              id="submitBtn"
+              style="display: none"
+            >
+              Register
+            </button>
           </div>
-        </div>
-
-        <!-- Step 3: Identity Details -->
-        <div class="step">
-          <div class="mb-3">
-            <label for="aadhaar" class="form-label">Aadhaar Card No</label>
-            <input type="text" class="form-control" id="aadhaar" required />
-          </div>
-          <div class="mb-3">
-            <label for="pan" class="form-label">Pan Card No</label>
-            <input type="text" class="form-control" id="pan" required />
-          </div>
-        </div>
-
-        <!-- Step 4: Contact Details -->
-        <div class="step">
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" required />
-          </div>
-          <div class="mb-3">
-            <label for="address" class="form-label">Address</label>
-            <textarea
-              class="form-control"
-              id="address"
-              rows="2"
-              required
-            ></textarea>
-          </div>
-          <div class="mb-3">
-            <label for="contactNumber" class="form-label">Contact Number</label>
-            <input
-              type="text"
-              class="form-control"
-              id="contactNumber"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="maritalStatus" class="form-label">Marital Status</label>
-            <select id="maritalStatus" class="form-select" required>
-              <option value="" disabled selected>Select Status</option>
-              <option value="Single">Single</option>
-              <option value="Married">Married</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Success message -->
-        <div id="successMessage" class="success-message"></div>
-
-        <!-- Navigation Buttons -->
-        <div class="step-buttons">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            id="prevBtn"
-            onclick="prevStep()"
-          >
-            Previous
-          </button>
-          <button
-            type="button"
-            class="btn btn-primary"
-            id="nextBtn"
-            onclick="nextStep()"
-          >
-            Next
-          </button>
-          <button
-            type="submit"
-            class="btn btn-success"
-            id="submitBtn"
-            style="display: none"
-          >
-            Register
-          </button>
-        </div>
-      </form>
+        </form>
       </div>
     </div>
 

@@ -1,0 +1,59 @@
+/* General body styling */
+body {
+  background-image: linear-gradient(
+    to right top,
+    #0072ff,
+    #0b78fd,
+    #197efb,
+    #2684f8,
+    #3289f5,
+    #2a91f6,
+    #2698f7,
+    #279ff7,
+    #0aa9fb,
+    #00b3fd,
+    #00bdfe,
+    #00c6ff
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+}
+
+h2 {
+  color: #343a40; /* Dark grey title color */
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Form Container */
+.container {
+  max-width: 600px;
+  margin: 10rem auto;
+  padding: 20px;
+  background-color: #eef3f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .container {
+    padding: 20px;
+  }
+
+  .step-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
